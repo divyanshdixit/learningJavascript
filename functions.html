@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // functions:
+        // global , local 
+        
+        var x = 10; // globally 
+        function fname(){
+            console.log(x);
+            var x = 20; // locally 
+            var y = 20;
+
+            var z = x + y;
+            
+            return z;
+        }
+        console.log(x);
+
+        var e = fname(); // 30
+        var f = 10;
+
+        function add(c,d){
+            return c*2 + d; //90
+        }
+
+        console.log(add(e,e));
+
+
+
+    </script>
+</body>
+</html>
