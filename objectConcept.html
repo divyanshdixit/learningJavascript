@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         // object
+    //   object literal , => property, method(function)
+        var x = 10;
+    
+    x = 20;
+
+    var person = {
+        name: 'Divyansh', // key : value [string, number, object, array, function, null, boolean]
+        gender:'male',
+        city:'kanpur',
+        color:'fair',
+        age:24,
+        nickname:['kishu', 'abhishek'],
+        walk: function(){  // method 
+            console.log('I can walk');
+        },
+        updateFunction: function(){
+            return `${this.name}   kkjkjkj  ${this.city}` ;
+        }
+    }
+    console.log(person.updateFunction());
+    // console.log(ObjectConcept.updateFunction('Changed'));
+
+    // accessing the value of obj:
+    
+        var A = ObjectConcept.age  // person.i // person.index
+    //    var B = ObjectConcept.name
+    //     var C = ObjectConcept.walk()
+
+    // 2nd method
+    ObjectConcept['name'];
+
+    // object destructring => unpack of array element, object element
+
+    var {name, gender} = ObjectConcept;   
+    console.log(name, gender); 
+
+    // array destructing
+
+    var arr = [1,'Divyansh', 24];
+
+    var [x,y, z] = arr;
+    console.log(x, y, z);
+    // object constructor function
+
+    ObjectConcept.name = 'User1'; 
+
+
+    console.log(ObjectConcept.name);
+
+    person.propname = 'new value'
+
+    </script>
+</body>
+</html>

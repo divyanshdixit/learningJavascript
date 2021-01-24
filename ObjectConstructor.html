@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // blueprint(object constructor function)
+
+        function persons(name=null, cityvalue, gen, color = 'white'){
+            this.name = name;
+            this.city = cityvalue;
+            this.gender = gen;
+            this.color = color;
+            this.xy = 10;
+            this.walk = function(){
+                return 'asdasd'
+            }
+        }
+
+        
+        var person1 = new persons('ads','kanpur', 'male')
+        
+        var person2 = new persons('div1', 'kanpur1', 'male2')
+        
+        var person3 = new persons('div2', 'kanpur2', 'male3', 'green')
+
+        console.log(person1.name);
+
+        // we can't change the property vlaue not adding new property from outside the cons function. 
+        xy = 20;
+        persons.xy = 20;
+
+        persons.newprop = 'sadsddasdas'
+
+        // prototype: => u can add new propert, function or you can modify it.
+        
+    
+        persons.prototype.floor = test;
+
+        console.log(person1.floor);
+        // Object
+
+    </script>
+</body>
+</html>
