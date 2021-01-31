@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 ondblclick="dblListener()" id='123'> Event </h1>
+    
+    <input type="text" value="" id="inputs" onchange="changeEvent()"/>
+
+    <button onclick="getValue()"> Submit </button>
+
+    <select onchange="changeEvent()">
+        <option value="0"> --- </option>
+        <option> First </option>
+        <option> Second  </option>
+    </select>
+
+    <img src="" id="image" alt="image "/>
+
+    <script>
+
+        //addEventListener()
+        document.getElementById('123').addEventListener('click',clickListener)
+
+
+        document.getElementById('image').onload = function(){
+            loadListener()
+        }
+
+        loadListener = () => {
+            console.log('loaded')   
+        }
+
+        getValue = () => {
+            var val = document.getElementById('inputs').value;
+            console.log(val);
+        }
+        
+        changeEvent = () => console.log('Change')
+
+        function clickListener(){ // Listener
+            
+            document.getElementById('123').innerHTML = 'Listener';
+        }
+
+        dblListener = () => document.getElementById('123').innerHTML = 'Event';
+
+        // clickListener = () => alert('Clicked');
+
+        // Event = > action taken by user in web page 
+        /* 
+        onload
+        onclick
+        onchange
+        onMouseover
+        */
+
+        // Listener => listeners are function return what we want to do based on user action
+        
+
+    </script>
+</body>
+</html>
